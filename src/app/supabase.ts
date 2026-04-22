@@ -4,7 +4,7 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 @Injectable({
   providedIn: 'root'
 })
-export class SupabaseService {
+export class Supabase {
   private supabase: SupabaseClient;
 
   private supabaseUrl = 'https://cqsxhzsjtkvjvpyrmoen.supabase.co/rest/v1/';

@@ -1,3 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+:root {
+  --verde-olivo-oscuro: #3F4F3A;
+  --verde-salvia-medio: #6E7F63;
+  --beige-calido: #C9C1A3;
+  --beige-crema: #E6DFC8;
+  --verde-grisaceo: #A8B29A;
+  --blanco-puro: #FFFFFF;
+
+  --fuente-serif: 'Playfair Display', serif;
+  --fuente-sans: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--beige-crema);
+}
