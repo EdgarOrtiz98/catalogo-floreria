@@ -1,0 +1,28 @@
+.commitment-card {
+    position: relative;
+    height: 350px;
+    transition: transform 0.3s ease;
+}
+
+.commitment-card:hover {
+    transform: translateY(-5px);
+}
+
+.commitment-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+
+.commitment-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--verde-olivo-oscuro);
+    opacity: 0.65;
+    z-index: 1;
+}
