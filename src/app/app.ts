@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal, inject } from '@angular/core';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { Navbar } from './component/navbar/navbar';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,14 @@ import { Navbar } from './component/navbar/navbar';
 })
 export class App {
   protected readonly title = signal('catalogo-floreria');
+  protected readonly showNavbar = signal(true);
+  private router = inject(Router);
+
+  constructor() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.showNavbar.set(!event.urlAfterRedirects.startsWith('/admin'));
+    });
+  }
 }
