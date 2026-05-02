@@ -1,0 +1,48 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="category-manager">
+  <section class="admin-card">
+    <h2 class="card-title">Nueva Categoría</h2>
+    <form [formGroup]="categoriaForm" (ngSubmit)="onSaveCategoria()" class="admin-form">
+      
+      <div class="form-group">
+        <label for="cat-nombre" class="form-label">Nombre de categoría</label>
+        <input type="text" id="cat-nombre" formControlName="nombre" placeholder="Ej: Ramos de Boda" class="form-input">
+      </div>
+
+      <div class="form-group">
+        <label for="cat-desc" class="form-label">Descripción breve</label>
+        <textarea id="cat-desc" formControlName="descripcion" placeholder="Explica la categoría..." class="form-textarea"></textarea>
+      </div>
+
+      <button type="submit" [disabled]="categoriaForm.invalid || cargando" class="btn btn-primary">
+        {{ cargando ? 'Creando...' : 'Crear Categoría' }}
+      </button>
+    </form>
+  </section>
+
+  <section class="admin-card">
+    <h2 class="card-title">Categorías Guardadas</h2>
+    <div class="table-container">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cat of categorias">
+            <td>{{ cat.id_categoria }}</td>
+            <td class="table-name">{{ cat.nombre }}</td>
+            <td class="table-desc">{{ cat.descripcion }}</td>
+          </tr>
+          <tr *ngIf="categorias.length === 0">
+            <td colspan="3" class="text-center">No hay categorías registradas.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+

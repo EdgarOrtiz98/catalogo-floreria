@@ -1,0 +1,180 @@
+/* --- Contenedor Principal --- */
+.admin-dashboard {
+  /* Usamos el beige crema de tu catálogo como fondo general */
+  background-color: var(--beige-crema, #E6DFC8); 
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  font-family: var(--fuente-sans, 'Lato', sans-serif);
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+}
+
+.admin-header {
+  margin-bottom: 3rem;
+}
+
+.admin-title {
+  font-family: var(--fuente-serif, 'Playfair Display', serif);
+  font-size: 2.5rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  font-weight: 600;
+}
+
+/* --- Tarjetas (Estilo Catálogo) --- */
+.admin-card {
+  background-color: var(--blanco-puro, #FFFFFF);
+  border-radius: 16px; /* Bordes más suaves y modernos */
+  padding: 2.5rem 3rem;
+  margin-bottom: 2.5rem;
+  /* Sombra ultra sutil, elimina el borde duro */
+  box-shadow: 0 10px 30px rgba(63, 79, 58, 0.05); 
+  border: none;
+}
+
+.card-title {
+  font-family: var(--fuente-sans);
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(168, 178, 154, 0.3); /* Línea divisoria muy suave */
+}
+
+/* --- Formularios y Usabilidad --- */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem; /* Más espacio para respirar */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  letter-spacing: 0.5px;
+}
+
+/* --- Inputs Modernos --- */
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background-color: #FAFAF7; /* Un tinte blanquecino para diferenciar del fondo puro */
+  border: 1px solid var(--verde-grisaceo, #A8B29A);
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  font-family: var(--fuente-sans, 'Lato', sans-serif);
+  font-size: 1rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  transition: all 0.3s ease;
+}
+
+/* Estado de foco: clave para la usabilidad */
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  background-color: var(--blanco-puro, #FFFFFF);
+  border-color: var(--verde-salvia-medio, #6E7F63);
+  box-shadow: 0 0 0 4px rgba(110, 127, 99, 0.15); /* Anillo de foco elegante */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #B0B0B0;
+  font-weight: 300;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* --- Input de Archivo (Foto) --- */
+.file-group {
+  margin-top: 0.5rem;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FAFAF7;
+  border: 2px dashed var(--verde-grisaceo, #A8B29A);
+  border-radius: 12px;
+  padding: 2.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.file-label:hover {
+  border-color: var(--verde-salvia-medio, #6E7F63);
+  background-color: rgba(110, 127, 99, 0.03);
+}
+
+.file-text {
+  font-size: 0.95rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  font-weight: 500;
+}
+
+.form-file-input {
+  display: none;
+}
+
+/* --- Botones --- */
+.btn {
+  font-family: var(--fuente-sans, 'Lato', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  border-radius: 8px; /* Menos redondeado, más maduro */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--verde-olivo-oscuro, #3F4F3A);
+  color: var(--blanco-puro, #FFFFFF);
+  align-self: flex-start; /* Evita que el botón ocupe todo el ancho */
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--verde-salvia-medio, #6E7F63);
+  transform: translateY(-2px); /* Pequeño salto al pasar el mouse */
+}
+
+.btn-primary:disabled {
+  background-color: var(--verde-grisaceo, #A8B29A);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Ajustes Móviles --- */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .admin-card {
+    padding: 1.5rem;
+  }
+}

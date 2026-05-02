@@ -1,0 +1,116 @@
+/* --- Tarjetas (Estilo Catálogo) --- */
+.admin-card {
+  background-color: var(--blanco-puro, #FFFFFF);
+  border-radius: 16px; /* Bordes más suaves y modernos */
+  padding: 2.5rem 3rem;
+  margin-bottom: 2.5rem;
+  /* Sombra ultra sutil, elimina el borde duro */
+  box-shadow: 0 10px 30px rgba(63, 79, 58, 0.05); 
+  border: none;
+}
+
+.card-title {
+  font-family: var(--fuente-serif, 'Playfair Display', serif);
+  font-size: 1.8rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(168, 178, 154, 0.3); /* Línea divisoria muy suave */
+}
+
+/* --- Formularios y Usabilidad --- */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem; /* Más espacio para respirar */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  letter-spacing: 0.5px;
+}
+
+/* --- Inputs Modernos --- */
+.form-input,
+.form-textarea {
+  width: 100%;
+  background-color: #FAFAF7; /* Un tinte blanquecino para diferenciar del fondo puro */
+  border: 1px solid var(--verde-grisaceo, #A8B29A);
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  font-family: var(--fuente-sans, 'Lato', sans-serif);
+  font-size: 1rem;
+  color: var(--verde-olivo-oscuro, #3F4F3A);
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Previene desbordes */
+}
+
+/* Estado de foco: clave para la usabilidad */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background-color: var(--blanco-puro, #FFFFFF);
+  border-color: var(--verde-salvia-medio, #6E7F63);
+  box-shadow: 0 0 0 4px rgba(110, 127, 99, 0.15); /* Anillo de foco elegante */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #B0B0B0;
+  font-weight: 300;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* --- Botones --- */
+.btn {
+  font-family: var(--fuente-sans, 'Lato', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  border-radius: 8px; /* Menos redondeado, más maduro */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--verde-olivo-oscuro, #3F4F3A);
+  color: var(--blanco-puro, #FFFFFF);
+  align-self: flex-start; /* Evita que el botón ocupe todo el ancho */
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--verde-salvia-medio, #6E7F63);
+  transform: translateY(-2px); /* Pequeño salto al pasar el mouse */
+}
+
+.btn-primary:disabled {
+  background-color: var(--verde-grisaceo, #A8B29A);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Ajustes Móviles --- */
+@media (max-width: 768px) {
+  .admin-card {
+    padding: 1.5rem;
+  }
+}
+
+.category-manager {
+  padding: 3rem 2rem;
+}
