@@ -26,3 +26,70 @@
     opacity: 0.65;
     z-index: 1;
 }
+
+@media (max-width: 768px) {
+    .commitment-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .commitment-container h2 {
+        font-size: x-large;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    .commitment-card {
+        min-height: 200px;
+        max-height: 230px;
+    }
+
+    .commitment-container-cards {
+        gap: 1rem;
+    }
+
+    .commitment-content {
+        padding: 1rem 1rem;
+    }
+
+    hr {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: 24px;
+        margin-right: 24px;
+        border-top: 2px solid var(--beige-calido);
+    }
+
+    .new-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .new-container h2 {
+        font-size: x-large;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    .offer-container {
+        margin-bottom: .5rem;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .offer-title {
+        font-size: x-large;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    .offer-link {
+        font-size: small;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+}
